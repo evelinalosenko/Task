@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p  />
+<ui-field label-id="buy" >
+    <div class="field_label">
+        <label>Soovin osta</label>
+    </div>
+    <div class="control">
+        <ui-inputgroup >
+            <input type="text" id="2_buyAmount" class="form-field-narrow" name="buyAmount" maxlength="12">
+            <select th:each="el : ${title}" class="selector-header currency curr-with-rate" id="buyCurrency" name="buyCurrency">
+                <option th:text="${el.title}"></option>
+            </select>
+            <input type="text" id="1_buyAmount" class="form-field-narrow" name="buyAmount" maxlength="12">
+            <select th:each="el : ${title}" class="selector-header currency curr-with-rate" id="buyCurrency" name="buyCurrency">
+                <option th:text="${el.title}"></option>
+            </select>
+        </ui-inputgroup>
+
+    </div>
+</ui-field>
+
+</body>
+</html>
